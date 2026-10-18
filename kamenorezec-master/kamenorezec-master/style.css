@@ -984,3 +984,47 @@ footer p {
         text-align: center;
     }
 }
+
+/* --- Jazichen prekinuvac (znaminja) / Language switcher --- */
+header nav ul li.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 25px;
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 0;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.lang-btn img {
+    width: 26px;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.lang-btn:hover {
+    transform: translateY(-1px);
+}
+
+.lang-btn.active {
+    border-color: #a67c52;
+    box-shadow: 0 0 0 1px rgba(166, 124, 82, 0.35);
+}
+
+@media (max-width: 850px) {
+    header nav ul li.lang-switch {
+        justify-content: center;
+        margin: 12px 0 4px;
+    }
+}

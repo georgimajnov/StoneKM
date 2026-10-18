@@ -1,6 +1,7 @@
 services:
   web:
-    build: .
-    restart: unless-stopped
-    ports: 
-      "3000:80"
+    build:
+      context: .
+      dockerfile: DockerFile
+    cpus: 0.5
+    mem_limit: 512m
